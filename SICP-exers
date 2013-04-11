@@ -1,0 +1,10 @@
+
+;;  exercise of 2.18
+
+(define (reverse items)
+  (define (iter res its)
+      (if (null? its)
+          res
+          (iter (cons (car its) res)
+                (cdr its))))
+  (iter nil items))
