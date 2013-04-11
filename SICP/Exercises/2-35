@@ -1,0 +1,8 @@
+;; SICP exercise 2.35
+
+(define (count-leaves tree)
+  (accumulate + 0 (map (lambda (x)
+                          (if (not (pair? x))
+                              1
+                              (count-leaves x)))
+                        tree)))
