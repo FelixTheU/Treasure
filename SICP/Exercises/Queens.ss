@@ -1,4 +1,3 @@
-
 ; the queens question and show all the style it can be like in the chess board.
 
 (define (safe? k pos)
