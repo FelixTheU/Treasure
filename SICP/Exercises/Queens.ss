@@ -18,6 +18,13 @@
 ; (safe? 8 '(6 4 1 5 8 2 7 3))
 
 
+(define (filter pred seq)
+    (cond ((null? seq) '())
+      ((pred (car seq))
+       (cons (car seq)
+         (filter pred (cdr seq))))
+      (else (filter pred (cdr seq)))))
+
 
 
 (define (string-double str)
